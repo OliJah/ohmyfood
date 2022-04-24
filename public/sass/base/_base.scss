@@ -1,17 +1,25 @@
 /* BASE */
 * {
-    padding: 0;
-    margin: 0;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .container {
-    max-width: 2560px;
-    border: 1px solid red;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 2560px;
+}
+h1 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+}
 
 h2,
 h3,
@@ -19,9 +27,63 @@ h4,
 h5,
 h6,
 p {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+main {
+  .subheader {
+    background-color: #eaeaea;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.reserve {
+  text-align: center;
+  background-color: #f7f7f7;
+    h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      padding: 1em 0 0 0;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.3rem;
+      padding: 1em 0 1.5em 0;
+    }
+
+    button {
+      background-image: linear-gradient(174deg, #FF79DA 0%, #9356DC 90%);
+      color: white;
+      font-size: 1.5rem;
+      padding: 1em 1.5em;
+      font-weight: 590;
+      margin: 0 auto;
+      border-radius: 80px;
+      border: 0 solid transparent;
+      box-shadow: 0px 0px 12px #00000033;
+      transition: transform 200ms;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
 }
