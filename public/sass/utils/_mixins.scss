@@ -1,5 +1,26 @@
+@import "../utils/variables";
+
 @mixin menu-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin heart-animated {
+  bottom: 1.5em;
+  color: #000;
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  right: 1em;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: linear-gradient($primary, $secondary);
+    color: $font-white;
+    font-weight: 600;
+    transform: scale(1.2);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+}

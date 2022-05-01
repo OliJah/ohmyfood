@@ -16,25 +16,98 @@ a {
 }
 
 .container {
-  max-width: 2560px;
+  max-width: 1280px;
+  margin: auto;
 }
 
-h1 {
-  font-family: "Shrikhand", "Roboto", sans-serif;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-family: "Roboto", sans-serif;
+ul,
+li {
+  list-style-type: none;
 }
 
 body {
   box-sizing: border-box;
   margin: 0px;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+.menu_container {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+
+.menu_header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_header i {
+  bottom: 1.5em;
+  color: #000;
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  right: 1em;
+  transition: all 0.2s ease-in-out;
+}
+.menu_header i:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: #ffffff;
+  font-weight: 600;
+  transform: scale(1.2);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu_header .menu_title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 2em;
+}
+
+header {
+  text-align: center;
+  box-shadow: 0px 5px 5px lightgrey;
+  border-bottom: 5px;
+  margin: 0;
+  padding: 0.5rem;
+  position: relative;
+}
+
+footer {
+  background-color: #353535;
+  padding: 3em;
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer li:hover {
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to top, lightgrey 0%, white 10%, transparent 10.01%) no-repeat center bottom/0 100%;
+}
+footer i {
+  margin-right: 0.5em;
+}
+footer .footer_link {
+  color: #ffffff;
+  font-size: 1.3em;
+  align-items: center;
+  background: linear-gradient(to top, lightgrey 0%, white 10%, transparent 10.01%) no-repeat center bottom/0 100%;
+  color: #ffffff;
+  height: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer_link:hover {
+  background-size: 50% 100%;
 }
 
 main .subheader {
@@ -55,9 +128,9 @@ main h2 {
 .reserve {
   text-align: center;
   background-color: #f7f7f7;
+  padding: 0 0 2em 0;
 }
 .reserve h2 {
-  font-size: 2rem;
   font-weight: 900;
   padding: 1em 0 0 0;
 }
@@ -66,7 +139,8 @@ main h2 {
   font-size: 1.3rem;
   padding: 1em 0 1.5em 0;
 }
-.reserve button {
+
+button {
   background-image: linear-gradient(174deg, #FF79DA 0%, #9356DC 90%);
   color: white;
   font-size: 1.5rem;
@@ -78,18 +152,166 @@ main h2 {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
   transition: transform 200ms;
 }
-.reserve button:hover {
+
+button:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-header {
-  text-align: center;
-  box-shadow: 0px 5px 5px lightgrey;
-  border-bottom: 5px;
-  margin: 0;
-  padding: 0.5rem;
+.fonction {
+  padding: 1.5rem;
+}
+.fonction ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.fonction li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  transition: transform 200ms;
+  margin-top: 30px;
+}
+.fonction li:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.fonction h2 {
+  font-size: 2rem;
+}
+.fonction .fonction_card {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 29rem;
+  height: 5.5rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.fonction .fonction_card_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
   position: relative;
+  right: 4.7rem;
+  font-size: 1.5rem;
+  background-color: #9356dc;
+  border-radius: 100%;
+  text-align: center;
+  padding: 0.9rem;
+  color: white;
+}
+.fonction span {
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+}
+
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2em 0 0 0;
+  padding: 2em 2em 2em 2em;
+  background-color: #f6f6f6;
+}
+.restaurants_title {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 2em;
+  color: #000000;
+}
+.restaurants_cards {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 1em 0;
+  max-width: 45%;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+.restaurants_cards i {
+  bottom: 0.7em;
+  color: #000;
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  right: 1em;
+  transition: all 0.2s ease-in-out;
+}
+.restaurants_cards i i:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: #ffffff;
+  font-weight: 600;
+  transform: scale(1.2);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants_cards:hover {
+  transform: scale(1.02);
+}
+.restaurants .restaurants_cards_new {
+  position: absolute;
+  padding: 0.5em;
+  right: 1em;
+  top: 1em;
+  background-color: #99E2D0;
+  border-radius: 5px;
+  color: #1f997c;
+}
+.restaurants img {
+  width: 100%;
+  height: 15em;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.restaurants i {
+  bottom: 0.7em;
+  color: #000;
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  right: 1em;
+  transition: all 0.2s ease-in-out;
+}
+.restaurants i:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: #ffffff;
+  font-weight: 600;
+  transform: scale(1.2);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .restaurants_cards_title {
+  color: #000000;
+  margin: 0.5em 0 0 1em;
+}
+.restaurants .restaurants_cards_desc {
+  color: #000000;
+  margin: 0 0 0.5em 1.2em;
+}
+
+@media screen and (max-width: 768px) {
+  .restaurants {
+    flex-direction: column;
+  }
+
+  .restaurants_cards {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
