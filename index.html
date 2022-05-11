@@ -24,7 +24,7 @@
 
 <body>
     <main class="container">
-        <header>
+        <header class="container_header" id="home">
             <div id="logo">
                 <h1><a href="index.html">ohmyfood</a></h1>
             </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="subheader__content">
                 <a href="#">
-                    <h2>Paris, Belleville</h2>
+                    <h2 class="subtitle">Paris, Belleville</h2>
                 </a>
             </div>
         </div>
@@ -50,80 +50,103 @@
                 <button>Explorer nos restaurants</button>
             </section>
 
-            <section class="fonction">
-                <h2 class="fonction_title">Fonctionnement</h2>
+            <section class="tuto">
 
-                <ul class="fonction_container">
-                    <li class="fonction_card">
-                        <div class="fonction_card_number">1</div>
-                        <div><i class="tuto__card__icon fas fa-mobile-alt"></i></div>
-                        <span>Choissisez un restaurants</span>
+                <h2 class="tuto__title">Fonctionnement</h2>
+
+                <ul class="tuto_container">
+                    <li class="tuto__card">
+                        <div class="tuto__card__number">
+                            1
+                        </div>
+                        <i class="tuto__card__icon fas fa-mobile-alt"></i>
+                        <span>Choisissez un restaurant</span>
                     </li>
 
-                    <li class="fonction_card">
-                        <div class="fonction_card_number">2</div>
-                        <div><i class="tuto__card__icon fas fa-list"></i></div>
+                    <li class="tuto__card">
+                        <div class="tuto__card__number">
+                            2
+                        </div>
+                        <i class="tuto__card__icon fas fa-list"></i>
                         <span>Composez votre menu</span>
                     </li>
 
-                    <li class="fonction_card">
-                        <div class="fonction_card_number">3</div>
-                        <div><i class="tuto__card__icon fas fa-store"></i></div>
+                    <li class="tuto__card">
+                        <div class="tuto__card__number">
+                            3
+                        </div>
+                        <i class="tuto__card__icon fas fa-store"></i>
                         <span>Dégustez au restaurant</span>
                     </li>
                 </ul>
+
             </section>
-        </section>
 
-        <section class="restaurants">
-            <h2 class="restaurants_title">Restaurants</h2>
-            <div class="restaurants_cards">
-                <a href="/pages/la-palette-du-gout.html">
-                    <span class="restaurants_cards_new" data-value="true">Nouveau</span>
-                    <img src="./public/img/menilmontant.jpg">
-                    <h3 class="restaurants_cards_title">La Palette du Goût</h3>
-                    <p class="restaurants_cards_desc">Mélimontant</p>
-                    <i class="far fa-heart"></i>
-                </a>
-            </div>
+            <section class="restaurants">
+                <h2 class="restaurants_title">Restaurants</h2>
+                <div class="restaurants_cards">
+                    <a href="/pages/la-palette-du-gout.html">
+                        <span class="restaurants_cards_new" data-value="true">Nouveau</span>
+                        <img src="./public/img/menilmontant.jpg">
+                        <h3 class="restaurants_cards_title">La Palette du Goût</h3>
+                        <p class="restaurants_cards_desc">Mélimontant</p>
+                        <i class="heart far fa-heart"></i>
+                    </a>
+                </div>
 
-            <div class="restaurants_cards">
-                <i class="far fa-heart"></i>
-                <a href="/pages/la-note-enchantee.html">
-                    <span class="restaurants_cards_new" data-value="false">Nouveau</span>
-                    <img src="./public/img/charonne.jpg">
-                    <h3 class="restaurants_cards_title">La note enchantée</h3>
-                    <p class="restaurants_cards_desc">Charonne</p>
-                </a>
-            </div>
+                <div class="restaurants_cards">
+                    <i class="heart far fa-heart"></i>
+                    <a href="/pages/la-note-enchantee.html">
+                        <span class="restaurants_cards_new" data-value="false">Nouveau</span>
+                        <img src="./public/img/charonne.jpg">
+                        <div class="restaurants_cards_txt">
+                        <h3 class="restaurants_cards_title">La note enchantée</h3>
+                        <p class="restaurants_cards_desc">Charonne</p>
+                        </div>
+                    </a>
+                </div>
 
-            <div class="restaurants_cards">
-                <i class="far fa-heart"></i>
-                <a href="/pages/a-la-francaise.html">
-                    <img src="./public/img/cite_rouge.jpg">
-                    <h3 class="restaurants_cards_title">À la française</h3>
-                    <p class="restaurants_cards_desc">Cité Rouge</p>
-                </a>
-            </div>
+                <div class="restaurants_cards">
+                    <i class="heart far fa-heart"></i>
+                    <a href="/pages/a-la-francaise.html">
+                        <img src="./public/img/cite_rouge.jpg">
+                        <h3 class="restaurants_cards_title">À la française</h3>
+                        <p class="restaurants_cards_desc">Cité Rouge</p>
+                    </a>
+                </div>
 
-            <div class="restaurants_cards">
-                <i class="far fa-heart"></i>
-                <a href="/pages/le-delice-des-sens.html">
-                    <img src="./public/img/folie_mericourt.jpg">
-                    <h3 class="restaurants_cards_title">Le délice des sens</h3>
-                    <p class="restaurants_cards_desc">Folie-Méricourt</p>
-                </a>
-            </div>
-        </section>
+                <div class="restaurants_cards">
+                    <i class="heart far fa-heart"></i>
+                    <a href="/pages/le-delice-des-sens.html">
+                        <img src="./public/img/folie_mericourt.jpg">
+                        <h3 class="restaurants_cards_title">Le délice des sens</h3>
+                        <p class="restaurants_cards_desc">Folie-Méricourt</p>
+                    </a>
+                </div>
+            </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <a href="#home"><h3 class="footer_logo">ohmyfood</h3></a>
+
         <ul>
-            <li><a href="#" class="footer_link_svg"><img src="./public/img/ohmyfood@2x.svg" alt="Logo OhMyFood"/></a></li>
-            <li><a href="#ProposerUnRestaurant" class="footer_link"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#DevenirPartenaire" class="footer_link"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
-            <li><a href="#MentionsLegales" class="footer_link">Mentions légales</a></li>
-            <li><a href="#Contact" class="footer_link">Contact</a></li>
+            <li class="footer_list">
+                <a href="#ProposerUnRestaurant" class="footer_link"><i
+                        class="footer_icons fas fa-utensils"></i>Proposer un restaurant</a>
+            </li>
+
+            <li class="footer_list">
+                <a href="#DevenirPartenaire" class="footer_link"><i
+                        class="footer_icons fas fa-hands-helping"></i>Devenir partenaire</a>
+            </li>
+
+            <li class="footer_list">
+                <a href="#MentionsLegales" class="footer_link">Mentions légales</a>
+            </li>
+
+            <li class="footer_list">
+                <a href="#Contact" class="footer_link">Contact</a>
+            </li>
         </ul>
     </footer>
 </body>

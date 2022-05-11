@@ -1,27 +1,118 @@
 @use "../utils/mixins";
 
+/* HEADER */
+
+.pr_header{
+  padding: 20px 25px 10px 25px;
+  display: flex;
+  align-items: center;
+  &__logo{
+      margin: auto;
+  }
+  &__back{
+      font-size: 20px;
+  }
+}
+
+.pr_img{
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
 img {
   max-width: 100%;
 }
 
-.menu_container {
-  margin-top: -4rem;
-  border-radius: 2rem 2rem 0 0;
-  background-color: #f6f6f6;
-  z-index: 1;
-  position: relative;
-}
-.menu_header {
-  padding: 1rem 2rem 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* MENU */
 
-  & i {
-    @include mixins.heart-animated;
+
+.pr_main{
+  margin-top: -30px;
+  position: relative;
+  border-radius: 30px 30px 0 0;
+  background-color: #f6f6f6;
+  padding: 35px 15px 80px 15px;
+  &__header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 45px;
+      &__title{
+          font-family: 'Shrikhand', sans-serif;
+      }
   }
-  .menu_title {
-    font-family: "Shrikhand", sans-serif;
-    font-size: 2em;
+
+}
+
+.dishes{
+  padding-bottom: 40px;
+  &__header{
+      margin-bottom: 25px;
+      ::after{
+          content: "";
+          display: block;
+          margin-top: 5px;
+          width: 40px;
+          height: 3px;
+          background-color: $tertiary;
+      }
   }
+  &__card{
+      height: 70px;
+      width: 100%;
+      padding-left: 10px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      @include shadow;
+      &__txt{
+          width: 90%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          &--over{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+          }
+      }
+      &__price{
+          margin-left: 10px;
+      }
+      &__check{
+          height: 70px;
+          width: 60px;
+          opacity: 0;
+          background-color: $tertiary;
+          margin-left: 25px;
+          margin-right: -70px;
+          border-radius: 0 10px 10px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.7s ease-in-out;
+      }
+      &:hover :nth-child(3) {
+          opacity: 1;
+          margin-right: 0px;
+      }
+      &:hover .check_icons{
+          opacity: 1;
+          transform: rotate(-360deg);
+      }
+  }
+  
+}
+
+
+@media (min-width: 64rem) {
+ .submenu {
+grid-template-columns: repeat(3,1fr);
+column-gap: 1rem;
+}
+
 }
