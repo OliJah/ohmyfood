@@ -8,7 +8,18 @@
         margin-bottom: 15px;
     }
     &_link{
-        color: white;
+        background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;
+        color: #fff;
+        height: 1.5em;
+        transition: all .3s ease-in-out;
+
+         i {
+            margin-right: .5em;
+        }
+
+        &:hover {
+            background-size: 50% 100%;
+        }
     }
     &_icons{
         margin-right: 10px;
