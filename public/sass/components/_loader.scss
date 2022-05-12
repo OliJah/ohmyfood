@@ -10,28 +10,34 @@
   inset: 0px;
   z-index: 1;
   opacity: 0.8;
-  animation: loader 6s;
-  animation-fill-mode: forwards;
+  -webkit-animation: loader 6s;
+          animation: loader 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 
   &_dot {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin: 0 15px;
-    animation: rebound infinite 0.4s alternate;
+    -webkit-animation: rebound infinite 0.4s alternate;
+            animation: rebound infinite 0.4s alternate;
 
     &--d1 {
-      animation-delay: 1s;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s;
       background: $primary;
     }
 
     &--d2 {
-      animation-delay: 1.2s;
+      -webkit-animation-delay: 1.2s;
+              animation-delay: 1.2s;
       background: $secondary;
     }
 
     &--d3 {
-      animation-delay: 1.4s;
+      -webkit-animation-delay: 1.4s;
+              animation-delay: 1.4s;
       background: $tertiary;
     }
   }
