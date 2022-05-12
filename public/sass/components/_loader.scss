@@ -1,27 +1,38 @@
-.loader-container {
-    position: absolute;
-    background-color: #f1f1f1;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 1s ease-in-out;
-}
+.loader {
+  position: fixed;
+  background-color: #f1f1f1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  inset: 0px;
+  z-index: 1;
+  opacity: 0.8;
+  animation: loader 6s;
+  animation-fill-mode: forwards;
 
-.dot {
+  &_dot {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #000;
     margin: 0 15px;
-    animation: loader infinite 0.3s alternate;
-}
+    animation: rebound infinite 0.4s alternate;
 
-.d2 {
-    animation-delay: 0.05s;
-}
+    &--d1 {
+      animation-delay: 1s;
+      background: $primary;
+    }
 
-.d3 {
-    animation-delay: 0.1s;
+    &--d2 {
+      animation-delay: 1.2s;
+      background: $secondary;
+    }
+
+    &--d3 {
+      animation-delay: 1.4s;
+      background: $tertiary;
+    }
+  }
 }

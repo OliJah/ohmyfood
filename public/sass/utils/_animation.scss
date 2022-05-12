@@ -39,30 +39,32 @@
 }
 
 // Animation pour les circles du loader
-@keyframes loader{
+@keyframes rebound{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    75%{
+        transform: translateY(-20px);
+    }
     100%{
         transform: translateY(-30px);
     }
 }
 
 //  Animation de disparition du loader
-@keyframes rebound{
-    0%{
-        background-color: rgba(196,195,192,1);
+@keyframes loader{
+    0% {
+        transform: scale(1);
     }
-    25%{
-        background-color:rgba(196,195,192,1);;
-    }
-    50%{
-        background-color:rgba(196,195,192,1);
-    }
-    80%{
-        background-color:rgba(196,195,192,0.5);
-    }
-    100%{
-        background-color:rgba(196,195,192,0.5);
+
+    100% {
         visibility: hidden;
     }
+
+    
 }
 
 

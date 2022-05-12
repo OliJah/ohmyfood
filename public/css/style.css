@@ -399,26 +399,25 @@ body, html {
     transform: scaleX(1);
   }
 }
-@keyframes loader {
+@keyframes rebound {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
   100% {
     transform: translateY(-30px);
   }
 }
-@keyframes rebound {
+@keyframes loader {
   0% {
-    background-color: rgb(196, 195, 192);
-  }
-  25% {
-    background-color: rgb(196, 195, 192);
-  }
-  50% {
-    background-color: rgb(196, 195, 192);
-  }
-  80% {
-    background-color: rgba(196, 195, 192, 0.5);
+    transform: scale(1);
   }
   100% {
-    background-color: rgba(196, 195, 192, 0.5);
     visibility: hidden;
   }
 }
@@ -442,8 +441,8 @@ body, html {
   font-weight: bold;
 }
 
-.loader-container {
-  position: absolute;
+.loader {
+  position: fixed;
   background-color: #f1f1f1;
   width: 100vw;
   height: 100vh;
@@ -451,23 +450,30 @@ body, html {
   justify-content: center;
   align-items: center;
   transition: opacity 1s ease-in-out;
+  inset: 0px;
+  z-index: 1;
+  opacity: 0.8;
+  animation: loader 6s;
+  animation-fill-mode: forwards;
 }
-
-.dot {
+.loader_dot {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #000;
   margin: 0 15px;
-  animation: loader infinite 0.3s alternate;
+  animation: rebound infinite 0.4s alternate;
 }
-
-.d2 {
-  animation-delay: 0.05s;
+.loader_dot--d1 {
+  animation-delay: 1s;
+  background: #9356DC;
 }
-
-.d3 {
-  animation-delay: 0.1s;
+.loader_dot--d2 {
+  animation-delay: 1.2s;
+  background: #FF79DA;
+}
+.loader_dot--d3 {
+  animation-delay: 1.4s;
+  background: #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */
