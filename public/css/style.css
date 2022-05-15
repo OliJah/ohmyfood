@@ -72,6 +72,7 @@ img {
 }
 .pr_main__header__title {
   font-family: "Shrikhand", sans-serif;
+  font-size: 2em;
 }
 
 .container_dishes {
@@ -94,6 +95,9 @@ img {
   animation: progress 2s;
   animation-fill-mode: both;
   transform: scale(0);
+}
+.dishes_subtitle {
+  font-size: 16px;
 }
 .dishes__card {
   height: 70px;
