@@ -48,6 +48,7 @@ body {
   max-height: 29em;
   width: 100%;
   max-width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -81,6 +82,9 @@ img {
 
 .dishes {
   padding-bottom: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dishes__header {
   margin-bottom: 25px;
@@ -92,7 +96,9 @@ img {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
+  -webkit-animation: progress 2s;
   animation: progress 2s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   transform: scale(0);
 }
@@ -108,11 +114,16 @@ img {
   align-items: center;
   border-radius: 10px;
   margin-bottom: 15px;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
   box-shadow: 2px 2px 10px #c4c3c0;
+  -webkit-animation: appear 0.5s;
   animation: appear 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.49, 0.56, 1.06);
   animation-timing-function: cubic-bezier(0, 0.49, 0.56, 1.06);
   transform: scale(0);
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 .dishes__card__txt {
@@ -122,9 +133,11 @@ img {
   text-overflow: ellipsis;
 }
 .dishes__card__txt--over {
+  max-width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border: 1px solid red;
 }
 .dishes__card__price {
   margin-left: 10px;
@@ -154,6 +167,7 @@ img {
 @media (min-width: 64rem) {
   .container_dishes {
     grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 1rem;
     column-gap: 1rem;
   }
 }
