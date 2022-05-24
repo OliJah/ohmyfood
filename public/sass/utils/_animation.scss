@@ -1,5 +1,6 @@
 
-// Animation d'apparition des "cards" pour les menus
+
+//* Animation of appearance of "cards" for menus *//
 @keyframes appear{
     0%{
         transform: scale(0);
@@ -9,7 +10,7 @@
     }
 }
 
-// delais d'apparition des "cards" pour les menus
+//* delay of appearance of "cards" for menus *//
 .delay1{
     animation-delay: 0.1s;
 }
@@ -28,7 +29,7 @@
 
 
 
-// Animation pour le soulignage des intitulés "entrées, plats, desserts"
+//* Animation for highlighting the titles "entrées, plats, desserts" *//
 @keyframes progress{
     0%{
         transform: scaleX(0);
@@ -38,7 +39,7 @@
     }
 }
 
-// Animation pour les circles du loader
+//* Animation for loader circles *//
 @keyframes rebound{
     0%{
         transform: translateY(0);
@@ -54,7 +55,7 @@
     }
 }
 
-//  Animation de disparition du loader
+//* Loader disappearance animation *//
 @keyframes loader{
     0% {
         transform: scale(1);
@@ -67,7 +68,7 @@
     
 }
 
-// Animation pour les cartes 
+//* Animation for cards *//
 
 @keyframes appear {
     0% {
@@ -80,7 +81,7 @@
 }
 
 
-// Animation pour le remplissage du coeur "heart"
+//* Animation for filling the heart "heart" *//
 @keyframes fill{
     0%{
         opacity: 0;

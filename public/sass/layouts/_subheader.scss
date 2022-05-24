@@ -1,3 +1,5 @@
+/* SUBHEADER */
+
 main {
     .subheader {
       background-color: #eaeaea;
@@ -7,8 +9,12 @@ main {
       align-items: center;
       gap: 1rem;
     }
-  
+    .subtitle {
+      font-size: 1rem;
+      color: #000000a4;
+
+    }
     i {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 }
